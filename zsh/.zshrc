@@ -126,4 +126,5 @@ wiki() {
 }
 
 eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 export PATH="$PATH:/opt/nvim/"
