@@ -111,15 +111,7 @@ alias bat="batcat"
 alias fs="fastfetch"
 alias gh="sensible-browser https://github.com/"
 alias lms="sensible-browser https://edu.goiteens.com/courses"
-
-c() {
-  if [[ "$1" == "-h" ]]
-  then
-    echo "Line-Calc with +, -, x, /, xx"
-  else
-    cargo run --manifest-path /mnt/d/rust/calc/Cargo.toml -- $1 $2 $3
-  fi
-}
+alias c="calc"
 
 wiki() {
   sensible-browser https://en.wikipedia.org/wiki/$1
