@@ -109,9 +109,12 @@ alias nit="sensible-browser https://app.nit.school/diary"
 alias wez="curl wttr.in/Lviv" 
 alias bat="batcat"
 alias fs="fastfetch"
-alias gh="sensible-browser https://github.com/"
+alias ghp="sensible-browser https://github.com/"
 alias lms="sensible-browser https://edu.goiteens.com/courses"
-alias c="calc"
+alias c="calc-own"
+alias t="text-editor"
+alias f="nvim \$(~/fzf --layout=reverse --border --info=inline --margin=4,20 --padding=1 --preview='batcat --color=always --style=plain {}' --style=full)"
+alias fd="cd ./\$(find * -type d | ~/fzf --layout=reverse --border --info=inline --margin=4,20 --padding=1 --preview='tree -C {}' --style=full)"
 
 wiki() {
   sensible-browser https://en.wikipedia.org/wiki/$1
@@ -119,4 +122,10 @@ wiki() {
 
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+# source <(fzf --zsh)
 export PATH="$PATH:/opt/nvim/"
+export PATH="$PATH:~/fzf"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
