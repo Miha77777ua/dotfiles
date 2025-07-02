@@ -34,6 +34,9 @@
             "key": " ",
             "keyColor": "34",  
         },
+                {
+            "type": "separator",
+        },
         {
             "type": "shell",
             "key": " ",
@@ -45,11 +48,6 @@
             "keyColor": "34", 
         },
         {
-            "type": "wm",
-            "key": " ",
-            "keyColor": "34", 
-        },
-        {
             "type": "cursor",
             "key": " ",
             "keyColor": "34", 
@@ -58,6 +56,9 @@
             "type": "terminalfont",
             "key": " ",
             "keyColor": "34", 
+        },
+                {
+            "type": "separator",
         },
         {
             "type": "uptime",
@@ -81,13 +82,21 @@
             "keyColor": "34", 
         },
                 {
+            "type": "separator",
+        },
+                {
             "type": "memory",
             "key": "󰍛 ",
             "keyColor": "34"
         },
                 {
-            "type": "monitor",
-            "key": " ",
+            "type": "cpu",
+            "key": "󰻠 ",
+            "keyColor": "34",
+        },
+                {
+            "type": "gpu",
+            "key": " ",
             "keyColor": "34",
         },
         ]
