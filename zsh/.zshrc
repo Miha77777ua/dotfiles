@@ -108,14 +108,17 @@ alias cdd="cd /mnt/d/"
 alias cdc="cd /mnt/c/Users/User"
 alias nit="sensible-browser https://app.nit.school/diary"
 alias wez="curl wttr.in/Lviv" 
-alias bat="batcat"
 alias fs="fastfetch"
 alias ghp="sensible-browser https://github.com/"
 alias lms="sensible-browser https://edu.goiteens.com/courses"
 alias c="calc-own"
 alias t="text-editor"
-alias f="nvim \$(fzf --layout=reverse --border --info=inline --margin=4,20 --padding=1 --preview='batcat --color=always --style=plain {}' --style=full)"
+alias f="nvim \$(fzf --layout=reverse --border --info=inline --margin=4,20 --padding=1 --preview='bat --color=always --style=plain {}' --style=full)"
 alias fd="cd ./\$(find * -type d | fzf --layout=reverse --border --info=inline --margin=4,20 --padding=1 --preview='tree -C {}' --style=full)"
+alias ls="exa --icons"
+alias ll="exa -lh --icons"
+alias l="exa -lh --icons -a"
+alias ani-cli="ani-cli --dub"
 
 wiki() {
   sensible-browser https://en.wikipedia.org/wiki/$1
@@ -127,6 +130,7 @@ export PATH="$PATH:/opt/nvim/"
 # export PATH="$PATH:~/fzf"
 export PATH="$PATH:/home/miha/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/mnt/d/mpv"
 
 eval "$(zoxide init --cmd cd zsh)"
 
