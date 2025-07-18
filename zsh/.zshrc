@@ -119,6 +119,7 @@ alias ls="exa --icons"
 alias ll="exa -lh --icons"
 alias l="exa -lh --icons -a"
 alias ani-cli="ani-cli --dub"
+alias s="spf"
 
 wiki() {
   sensible-browser https://en.wikipedia.org/wiki/$1
@@ -131,6 +132,10 @@ export PATH="$PATH:/opt/nvim/"
 export PATH="$PATH:/home/miha/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/mnt/d/mpv"
+export PATH="$PATH:/home/miha/bin"
+
+export DISPLAY=$(ip route list default | awk '{print $3}'):0
+export LIBGL_ALWAYS_INDIRECT=1
 
 eval "$(zoxide init --cmd cd zsh)"
 
