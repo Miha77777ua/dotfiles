@@ -34,4 +34,4 @@ cd dotfiles
 stow <name of package, like nvim>
 ```
 
-**And u r done!**
+### And u r done!✨
