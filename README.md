@@ -15,6 +15,7 @@
 ## Installation
 
 **Firstly, clone repo by running**
+
 ```bash
 git clone https://github.com/Miha77777ua/dotfiles.git
 ```
