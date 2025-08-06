@@ -14,10 +14,24 @@
 
 ## Installation
 
-**Firstly, clone repo by running**
+**Firstly, install GNU stow from [here](https://www.gnu.org/software/stow/) or by using your favorite package manager**
+
+**Then, clone repo by running**
 
 ```bash
 git clone https://github.com/Miha77777ua/dotfiles.git
 ```
+
+**Then, cd into cloned repo**
+
+```bash
+cd dotfiles
 ```
+
+**And run *stow* for every package**
+
+```bash
+stow <name of package, like nvim>
 ```
+
+**And u r done!**
