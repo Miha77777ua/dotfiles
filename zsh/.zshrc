@@ -130,7 +130,6 @@ wiki() {
 eval "$(starship init zsh)"
 source <(fzf --zsh)
 export PATH="$PATH:/opt/nvim/"
-# export PATH="$PATH:~/fzf"
 export PATH="$PATH:/home/miha/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/mnt/d/mpv"
