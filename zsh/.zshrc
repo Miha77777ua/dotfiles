@@ -121,6 +121,7 @@ alias ll="exa -lh --icons"
 alias l="exa -lh --icons -a"
 alias ani-cli="ani-cli --dub"
 alias s="spf"
+alias tree="ll -T"
 alias ghcr="gh repo create --public --push --source ."
 
 wiki() {
