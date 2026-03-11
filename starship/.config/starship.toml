@@ -65,6 +65,7 @@
 # vimcmd_symbol = '[ ](fg:#BB9AF7)'
 
 
+
 add_newline = true
 continuation_prompt = "[▸▹ ](dimmed white)"
 

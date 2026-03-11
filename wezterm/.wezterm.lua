@@ -18,13 +18,20 @@ bar.apply_to_config(config, {
 		},
 	},
 })
-
+-- config.default_prog = { 'powershell.exe', '-NoLogo' }
+config.default_domain = "WSL:archlinux"
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.enable_tab_bar = true
 config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "NeverPrompt"
 config.enable_wayland = true
+
+local wsl_domains = wezterm.default_wsl_domains()
+
+for _, dom in ipairs(wsl_domains) do
+	dom.default_cwd = "~"
+end
 
 config.colors = {
 	background = "black", -- Or use #000000 or {h = 0, s = 0, b = 0}
@@ -44,6 +51,8 @@ config.colors = {
 		},
 	},
 }
+
+config.wsl_domains = wsl_domains
 
 -- config.background = {
 --   {
