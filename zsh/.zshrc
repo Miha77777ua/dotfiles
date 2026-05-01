@@ -122,6 +122,7 @@ alias l="exa -lh --icons -a"
 alias ani-cli="ani-cli --dub"
 alias s="spf"
 alias tree="ll -T"
+alias swww="awww"
 rc() {
   gh repo create $1 --public --clone && gh repo view --web $1
 }
@@ -146,7 +147,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/mnt/d/mpv"
 export PATH="$PATH:/home/miha/bin"
 
-export DISPLAY=$(ip route list default | awk '{print $3}'):0
+export DISPLAY=:0
 export LIBGL_ALWAYS_INDIRECT=1
 
 eval "$(zoxide init --cmd cd zsh)"

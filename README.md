@@ -1,9 +1,6 @@
 # dotfiles
 
-**This small repo contains my dotfiles for my terminal setup**
-
-> [!NOTE]
-> **This repo contains config only for cli tools like neovim, fastfetch etc**
+**This small repo pretty much contains some of my dotfiles, so feel free to use it ;D**
 
 ---
 
@@ -35,4 +32,4 @@ cd dotfiles
 stow <name of package, like nvim>
 ```
 
-### And u r done!✨
+### And u r done
