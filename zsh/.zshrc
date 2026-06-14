@@ -132,6 +132,14 @@ cpr() {
   clang++ $1 -o main && ./main
 }
 
+qc() {
+  qemu-system-x86_64 -enable-kvm -drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2/x64/OVMF_CODE.4m.fd -drive if=pflash,format=raw,file=$2/OVMF_VARS.4m.fd -drive file=$1 -m 8G -cpu host -display gtk
+}
+
+qci() {
+  qemu-system-x86_64 -enable-kvm -cdrom $1 -boot menu=on -drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2/x64/OVMF_CODE.4m.fd -drive if=pflash,format=raw,file=$3/OVMF_VARS.4m.fd -drive file=$2 -m 8G -cpu host -display gtk
+}
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
