@@ -7,7 +7,7 @@ configuration {
 }
 
 * {
-	background: #232136de;
+	background: #191724de;
 	foreground: #e0def4;
 }
 
