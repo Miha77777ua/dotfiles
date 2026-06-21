@@ -156,8 +156,10 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/mnt/d/mpv"
 export PATH="$PATH:/home/miha/bin"
 
-export DISPLAY=:0
-export LIBGL_ALWAYS_INDIRECT=1
+export GTK_THEME=Adwaita:dark
+
+# export DISPLAY=:0
+# export LIBGL_ALWAYS_INDIRECT=1
 
 eval "$(zoxide init --cmd cd zsh)"
 

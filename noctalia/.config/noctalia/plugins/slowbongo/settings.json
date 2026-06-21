@@ -1,17 +1,11 @@
 {
   "idleTimeout": 150,
   "waitingTimeout": 30000,
-  "catColor": "none",
+  "catColor": "default",
   "catSize": 1.2000000000000002,
-  "catOffsetY": 0.10999999999999999,
+  "catOffsetY": 0,
   "raveMode": false,
   "tappyMode": false,
   "useMprisFilter": false,
-  "inputDevices": [
-    "/dev/input/event6",
-    "/dev/input/event3",
-    "/dev/input/event7",
-    "/dev/input/event5",
-    "/dev/input/event4"
-  ]
+  "inputDevices": []
 }

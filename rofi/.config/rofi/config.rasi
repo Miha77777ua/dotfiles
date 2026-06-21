@@ -1,0 +1,65 @@
+configuration {
+	modi: "drun,run";
+	show-icons: true;
+	display-drun: "";
+	drun-display-format: "{name}";
+	font: "JetBrainsMono Nerd Font 15";
+}
+
+* {
+	background: #232136de;
+	foreground: #e0def4;
+}
+
+window {
+	location: center;
+	anchor: center;
+	width: 500px;
+	height: 500px;
+	margin: 0px;
+	padding: 10px;
+	border: 2px solid;
+	border-color: #5b5067;
+	border-radius: 10px;
+}
+
+inputbar {
+	spacing: 10px;
+	padding: 10px;
+	margin: 0px;
+}
+
+textbox-prompt-colon {
+	enabled: false;
+}
+
+entry {
+	enabled: true;
+	placeholder: "Search...";
+}
+
+listview {
+	scrollbar: false;
+}
+
+element normal.normal,
+element alternate.normal
+{
+	background-color: transparent;
+}
+
+element selected.normal,
+{
+	background-color: #2a283ede;
+	text-color: #e0def4;
+}
+
+
+element-icon {
+	size: 50px;
+	background-color: transparent;
+}
+
+element-text {
+	vertical-align: 0.5;
+}
