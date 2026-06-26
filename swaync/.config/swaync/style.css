@@ -46,6 +46,10 @@ notificationwindow, blankwindow {
   background: transparent;
 }
 
+* {
+  font-family: "JetBrainsMono Nerd Font", "Noto Color Emoji";
+}
+
 .close-button {
   /* The notification Close Button */
   background: var(--noti-close-bg);

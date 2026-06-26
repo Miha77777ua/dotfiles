@@ -45,7 +45,7 @@
     "bar": {
         "autoHideDelay": 500,
         "autoShowDelay": 150,
-        "backgroundOpacity": 1,
+        "backgroundOpacity": 0,
         "barType": "simple",
         "capsuleColorKey": "none",
         "capsuleOpacity": 1,
@@ -73,6 +73,10 @@
         "rightClickCommand": "",
         "rightClickFollowMouse": true,
         "screenOverrides": [
+            {
+                "enabled": false,
+                "name": "HDMI-A-1"
+            }
         ],
         "showCapsule": false,
         "showOnWorkspaceSwitch": true,
@@ -150,10 +154,9 @@
                     "textColor": "none"
                 },
                 {
-                    "displayMode": "forceOpen",
+                    "displayMode": "onhover",
                     "iconColor": "none",
-                    "id": "KeyboardLayout",
-                    "showIcon": false,
+                    "id": "Bluetooth",
                     "textColor": "none"
                 },
                 {
@@ -303,7 +306,7 @@
         "pinnedApps": [
         ],
         "pinnedStatic": false,
-        "position": "bottom",
+        "position": "top",
         "showDockIndicator": false,
         "showLauncherIcon": false,
         "sitOnFrame": false,
