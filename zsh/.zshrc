@@ -10,9 +10,9 @@ export EDITOR='nvim'
 
 alias wez="curl wttr.in/Lviv" 
 alias fs="rxfetch"
-alias ls="exa --icons"
-alias ll="exa -l --icons"
-alias l="exa -l --icons -a"
+alias ls="eza --icons"
+alias ll="eza -l --icons"
+alias l="eza -l --icons -a"
 alias ani-cli="ani-cli --dub"
 alias tree="ll -T"
 rc() {
@@ -38,6 +38,8 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+source <(fzf --zsh)
 
 eval "$(starship init zsh)"
 
