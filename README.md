@@ -6,7 +6,7 @@
 
 ## Preview
 
-<https://github.com/user-attachments/assets/e92a9b66-e1b6-48cf-b7cc-ee83dff6d408>
+![preview]("./preview/preview.png")
 
 ---
 
