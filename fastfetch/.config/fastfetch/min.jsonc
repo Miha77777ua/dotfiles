@@ -12,6 +12,7 @@
     "modules": [
         "break",
         "title",
+        "separator",
         {
             "type": "os",
             "key": "os    ",
@@ -27,12 +28,6 @@
             "type": "wm",
             "format": "{process-name}",
             "key": "wm    ",
-            "keyColor": "33"
-        },
-        {
-            "type": "packages",
-            "key": "pkgs  ",
-            "format": "{pacman}",
             "keyColor": "33"
         },
         {
