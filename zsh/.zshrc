@@ -9,7 +9,7 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 
 alias wez="curl wttr.in/Lviv" 
-alias fs="rxfetch"
+alias fs="fastfetch --config min"
 alias ls="eza --icons"
 alias ll="eza -l --icons"
 alias l="eza -l --icons -a"
@@ -49,4 +49,4 @@ eval "$(zoxide init --cmd cd zsh)"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-rxfetch
+fastfetch --config min

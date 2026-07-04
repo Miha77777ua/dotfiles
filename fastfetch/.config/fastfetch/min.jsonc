@@ -1,0 +1,52 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+      "source": "artix2_small",
+      "padding": {
+        "top": 1
+      },
+    },
+    "display": {
+        "separator": "  "
+    },
+    "modules": [
+        "break",
+        "title",
+        {
+            "type": "os",
+            "key": "os    ",
+            "format": "lua:return (...).name:lower():match('^%S+')",
+            "keyColor": "33"
+        },
+        {
+            "type": "initsystem",
+            "key": "init  ",
+            "keyColor": "33"
+        },
+        {
+            "type": "wm",
+            "format": "{process-name}",
+            "key": "wm    ",
+            "keyColor": "33"
+        },
+        {
+            "type": "packages",
+            "key": "pkgs  ",
+            "format": "{pacman}",
+            "keyColor": "33"
+        },
+        {
+            "type": "shell",
+            "format": "{process-name}",
+            "key": "sh    ",
+            "keyColor": "33"
+        },
+        {
+            "type": "memory",
+            "key": "memory",
+            "keyColor": "33",
+            "format": "{used}"
+        },
+        "break"
+    ]
+}
