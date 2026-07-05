@@ -20,3 +20,8 @@ hash = "3f84eceb475a9d1c1ea911d93a1d1898"
 use = "BennyOe/tokyo-night"
 rev = "8e6296f"
 hash = "d9da921c3bd37ba32ee27a8a7a40461f"
+
+[[flavor.deps]]
+use = "bennyyip/gruvbox-dark"
+rev = "619fdc5"
+hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"

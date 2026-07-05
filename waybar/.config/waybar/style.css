@@ -1,0 +1,125 @@
+@define-color background #2C2A24;
+@define-color second-background #3A372F;
+@define-color text #DDD5C4;
+@define-color borders #A0907A;
+@define-color focused #D08B57;
+@define-color focused2 #BFAA80;
+@define-color color1 #7699A3;
+@define-color color2 #8D7AAE;
+@define-color color3 #78997A;
+@define-color urgent #B05A5A;
+
+* {
+  font-family: "Iosevka Nerd Font";
+  font-size: 15px;
+}
+
+#custom-openbracket,
+#custom-closebracket {
+  margin: 0 5px;
+}
+
+window#waybar {
+  background-color: transparent;
+  border-bottom: 0;
+  color: @text;
+  transition: background-color 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+.modules-left {
+  margin: 10px 0 0 10px;
+  padding: 0 7px 0 7px;
+  background-color: @background;
+  border: 2px solid @focused;
+}
+
+.modules-center {
+  margin: 10px 0 0 0;
+  padding: 0 10px 0 10px;
+  background-color: @background;
+  border: 2px solid @focused;
+}
+
+.modules-right {
+  margin: 10px 10px 0 0;
+  padding: 0 10px 0 10px;
+  background-color: @background;
+  border: 2px solid @focused;
+}
+
+#custom-artix {
+  padding-right: 11px;
+  padding-left: 5px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+#custom-artix:hover {
+  color: @color1;
+}
+
+#workspaces button {
+  min-width: 0;
+  padding: 0 8px 0 8px;
+  background-color: transparent;
+  color: @text;
+  border-radius: 0;
+}
+
+#workspaces button:hover {
+  background-color: @second-background;
+}
+
+#workspaces button.active {
+  color: @focused2;
+  background-color: @second-background;
+}
+
+#workspaces button.urgent {
+  background-color: @urgent;
+}
+
+#mpris {
+  margin: 0 0 0 0;
+  padding: 0 9px;
+  background-color: @background;
+  color: @text;
+}
+
+#window, #tray {
+  padding: 0 5px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory {
+  padding: 0 5px;
+}
+
+#battery.charging,
+#battery.plugged {
+  background-color: @focused2 ;
+  color: @background;
+}
+
+#battery.critical:not(.charging) {
+  background-color: @urgent;
+  color: @text;
+  animation: blink 0.5s steps(12) infinite alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: @second-background;
+    color: @text;
+  }
+}

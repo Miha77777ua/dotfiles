@@ -3,12 +3,12 @@ configuration {
 	show-icons: true;
 	display-drun: "";
 	drun-display-format: "{name}";
-	font: "JetBrainsMono Nerd Font 15";
+	font: "Iosevka Nerd Font 15";
 }
 
 * {
-	background: #191724de;
-	foreground: #e0def4;
+	background: #2C2A24de;
+	foreground: #EBDBB2;
 }
 
 window {
@@ -19,7 +19,7 @@ window {
 	margin: 0px;
 	padding: 10px;
 	border: 2px solid;
-	border-color: #5b5067;
+	border-color: #D08B57;
 	border-radius: 10px;
 }
 
@@ -50,8 +50,8 @@ element alternate.normal
 
 element selected.normal,
 {
-	background-color: #2a283ede;
-	text-color: #e0def4;
+	background-color: #3C3836de;
+	text-color: #EBDBB2;
 }
 
 

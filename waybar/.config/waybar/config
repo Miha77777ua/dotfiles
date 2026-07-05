@@ -1,0 +1,168 @@
+{
+    "height": 40,
+    "spacing": 5, 
+
+    "modules-left": [
+        "group/utilities",
+        "group/workspaces",
+        "group/music"
+    ],
+
+    "modules-center": [
+        "group/windows"
+    ],
+
+    "modules-right": [
+        "group/cpuram",
+        "group/system",
+        "group/tray-box"
+    ],
+
+    "custom/openbracket": {
+        "format": "[",
+        "tooltip": false
+    },
+
+    "custom/closebracket": {
+        "format": "]",
+        "tooltip": false
+    },
+
+    "custom/split": {
+      "format": "|",
+      "tooltip": false
+    },
+
+    "group/music": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "mpris",
+            "custom/closebracket"
+        ]
+    },
+
+    "group/utilities": {
+        "orientation": "horizontal",
+        "modules":[
+            "custom/openbracket",
+            "custom/artix",
+            "custom/closebracket"
+        ]
+    },
+
+    "custom/artix": {
+        "format": "\uf31f",
+        "tooltip": false,
+        "on-click": "rofi -show drun -no-show-icons"
+    },
+
+    "group/workspaces":{
+        "orientation": "horizontal",
+        "modules":[
+            "custom/openbracket",
+            "ext/workspaces",
+            "custom/closebracket"
+        ]
+    },
+
+    "ext/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+    },
+
+    "mpris": {
+        "format": "  {status_icon} | {dynamic}",
+        "interval": 1,
+        "dynamic-len": 40,
+        "status-icons": {
+            "playing": "▶",
+            "paused": "⏸",
+            "stopped": ""
+        },
+        "dynamic-order": ["artist"]
+    },
+
+    "group/windows": {
+        "orientation":"horizontal",
+        "modules":[
+            "custom/openbracket",
+            "dwl/window",
+            "custom/closebracket"
+        ]
+    },
+
+    "dwl/window": {
+        "format": "{title}", 
+        "max-length": 20,
+        "min-length": 0,
+        "all-outputs": true
+    },
+
+    "group/cpuram": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "cpu",
+            "custom/split",
+            "memory",
+            "custom/closebracket"
+        ]
+    },
+
+    "cpu": {
+        "format": "CPU:{usage}%",
+        "tooltip": false,
+        "interval": 2,
+        "on-click": "kitty -e btop",
+    },
+
+    "memory":{
+        "format": "RAM:{}%",
+        "tooltip": false,
+        "interval": 2,
+        "on-click": "kitty -e btop",
+    },
+
+    "group/system": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "clock",
+            "custom/split",
+            "battery",
+            "custom/closebracket"
+        ]
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 10
+    },
+
+    "group/tray-box": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/openbracket",
+            "tray",
+            "custom/closebracket"
+        ]
+    }
+}
