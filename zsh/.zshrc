@@ -15,6 +15,7 @@ alias ll="eza -l --icons"
 alias l="eza -l --icons -a"
 alias ani-cli="ani-cli --dub"
 alias tree="ll -T"
+
 rc() {
   gh repo create $1 --public --clone && gh repo view --web $1
 }
@@ -44,9 +45,5 @@ source <(fzf --zsh)
 eval "$(starship init zsh)"
 
 eval "$(zoxide init --cmd cd zsh)"
-
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 fastfetch --config min
