@@ -6,7 +6,7 @@
   --noti-bg-darker: rgb(38, 38, 38);
   --noti-bg-hover: rgb(44, 42, 36);
   --noti-bg-focus: rgba(68, 68, 68, 0.6);
-  --noti-close-bg: rgb(91, 80, 103);
+  --noti-close-bg: rgb(44, 42, 36);
   --noti-close-bg-hover: rgb(94, 94, 94);
   --text-color: rgb(255, 255, 255);
   --text-color-disabled: rgb(150, 150, 150);
@@ -15,7 +15,7 @@
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;
   --border: 1px solid var(--noti-border-color);
-  --border-radius: 12px;
+  --border-radius: 0px;
   --notification-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3),
     0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
   --font-size-body: 15px;
@@ -42,7 +42,9 @@
 @define-color text-color rgb(255, 255, 255);
 @define-color text-color-disabled rgb(150, 150, 150);
 @define-color bg-selected rgb(0, 128, 255);
-notificationwindow, blankwindow {
+
+notificationwindow,
+blankwindow {
   background: transparent;
 }
 
@@ -56,7 +58,7 @@ notificationwindow, blankwindow {
   color: var(--text-color);
   text-shadow: none;
   padding: 0;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   margin-top: 8px;
   margin-right: 8px;
   box-shadow: none;
@@ -242,7 +244,7 @@ notificationwindow, blankwindow {
   padding: 0;
 }
 
-.notification-row .notification-background .notification .notification-action > button {
+.notification-row .notification-background .notification .notification-action>button {
   border-radius: var(--border-radius);
   color: var(--text-color);
 }
@@ -273,7 +275,8 @@ notificationwindow, blankwindow {
   margin: 12px 20px;
 }
 
-.notification-group .notification-group-buttons, .notification-group .notification-group-headers {
+.notification-group .notification-group-buttons,
+.notification-group .notification-group-headers {
   margin: 0 16px;
   color: var(--text-color);
 }
@@ -373,12 +376,12 @@ notificationwindow, blankwindow {
 }
 
 /* Title widget */
-.widget-title > label {
+.widget-title>label {
   margin-right: 8px;
   font-size: 1.5rem;
 }
 
-.widget-title > button {
+.widget-title>button {
   margin-left: 8px;
   border-radius: var(--border-radius);
 }
@@ -400,7 +403,7 @@ notificationwindow, blankwindow {
 }
 
 /* Label widget */
-.widget-label > label {
+.widget-label>label {
   font-size: 1.1rem;
 }
 
@@ -452,28 +455,28 @@ notificationwindow, blankwindow {
   font-size: 1.1rem;
 }
 
-.widget-mpris .widget-mpris-player .mpris-overlay > box > button {
+.widget-mpris .widget-mpris-player .mpris-overlay>box>button {
   /* Change player control buttons */
 }
 
-.widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
+.widget-mpris .widget-mpris-player .mpris-overlay>box>button:hover {
   background-color: var(--mpris-button-hover);
 }
 
-.widget-mpris > box > button {
+.widget-mpris>box>button {
   /* Change player side buttons */
 }
 
-.widget-mpris > box > button:disabled {
+.widget-mpris>box>button:disabled {
   /* Change player side buttons insensitive */
 }
 
 /* Buttons widget */
-.widget-buttons-grid flowboxchild > button {
+.widget-buttons-grid flowboxchild>button {
   border-radius: var(--border-radius);
 }
 
-.widget-buttons-grid flowboxchild > button.toggle:checked {
+.widget-buttons-grid flowboxchild>button.toggle:checked {
   /* style given to the active toggle button */
 }
 
@@ -497,36 +500,36 @@ notificationwindow, blankwindow {
   } */
 }
 
-.widget-menubar > .menu-button-bar {
+.widget-menubar>.menu-button-bar {
   /* The left button container */
   /* The right button container */
   /* The left and right button container */
 }
 
-.widget-menubar > .menu-button-bar > .start {
+.widget-menubar>.menu-button-bar>.start {
   margin-left: 8px;
 }
 
-.widget-menubar > .menu-button-bar > .end {
+.widget-menubar>.menu-button-bar>.end {
   margin-right: 8px;
 }
 
-.widget-menubar > .menu-button-bar > .widget-menubar-container button {
+.widget-menubar>.menu-button-bar>.widget-menubar-container button {
   border-radius: var(--border-radius);
   margin: 0 4px;
 }
 
-.widget-menubar > revealer * {
+.widget-menubar>revealer * {
   margin-top: 8px;
 }
 
-.widget-menubar > revealer * button {
+.widget-menubar>revealer * button {
   border-radius: var(--border-radius);
   margin: 8px;
   margin-top: 0;
 }
 
-.widget-menubar > revealer * button:last-child {
+.widget-menubar>revealer * button:last-child {
   margin-bottom: 0;
 }
 
@@ -554,12 +557,12 @@ notificationwindow, blankwindow {
 
 /* Backlight widget */
 /* Inhibitors widget */
-.widget-inhibitors > label {
+.widget-inhibitors>label {
   margin-right: 8px;
   font-size: 1.5rem;
 }
 
-.widget-inhibitors > button {
+.widget-inhibitors>button {
   margin-left: 8px;
   border-radius: var(--border-radius);
 }
