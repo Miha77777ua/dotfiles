@@ -7,7 +7,7 @@ configuration {
 }
 
 * {
-	background: #2C2A24de;
+	background: #282828de;
 	foreground: #EBDBB2;
 }
 
@@ -19,8 +19,7 @@ window {
 	margin: 0px;
 	padding: 10px;
 	border: 2px solid;
-	border-color: #D08B57;
-	border-radius: 10px;
+	border-color: #A0907A;
 }
 
 inputbar {
