@@ -42,14 +42,14 @@ window#waybar.empty #window {
 
 .modules-center {
   margin: 10px 0 0 0;
-  padding: 0 10px 0 10px;
+  padding: 0 7px 0 7px;
   background-color: @background;
   border: 2px solid @focused;
 }
 
 .modules-right {
   margin: 10px 10px 0 0;
-  padding: 0 10px 0 10px;
+  padding: 0 7px 0 7px;
   background-color: @background;
   border: 2px solid @focused;
 }
