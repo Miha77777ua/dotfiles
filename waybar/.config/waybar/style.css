@@ -89,22 +89,3 @@ window#waybar.empty #window {
 #memory {
   padding: 0 5px;
 }
-
-#battery.charging,
-#battery.plugged {
-  background-color: @focused2 ;
-  color: @background;
-}
-
-#battery.critical:not(.charging) {
-  background-color: @urgent;
-  color: @text;
-  animation: blink 0.5s steps(12) infinite alternate;
-}
-
-@keyframes blink {
-  to {
-    background-color: @second-background;
-    color: @text;
-  }
-}

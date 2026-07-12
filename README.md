@@ -7,6 +7,7 @@
 ## Preview
 
 ![preview](./preview/preview.png)
+![preview2](./preview/preview2.png)
 
 ---
 
