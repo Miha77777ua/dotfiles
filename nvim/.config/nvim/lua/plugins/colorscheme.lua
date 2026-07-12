@@ -4,7 +4,7 @@ return {
     priority = 1000,
     config = true,
     opts = {
-      transparent_mode = true,
+      transparent_mode = false,
     },
   },
   {
@@ -12,5 +12,5 @@ return {
     opts = {
       colorscheme = "gruvbox",
     },
-  }
+  },
 }

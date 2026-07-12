@@ -19,8 +19,8 @@
 }
 
 window#waybar {
-  background-color: transparent;
-  border-bottom: 0;
+  background-color: @background;
+  border-top: 1px solid @text;
   color: @text;
   transition: background-color 0.5s;
 }
@@ -34,24 +34,21 @@ window#waybar.empty #window {
 }
 
 .modules-left {
-  margin: 10px 0 0 10px;
   padding: 0 7px 0 7px;
   background-color: @background;
-  border: 2px solid @focused;
+  border-top: 1px solid @text;
 }
 
 .modules-center {
-  margin: 10px 0 0 0;
   padding: 0 7px 0 7px;
   background-color: @background;
-  border: 2px solid @focused;
+  border-top: 1px solid @text;
 }
 
 .modules-right {
-  margin: 10px 10px 0 0;
   padding: 0 7px 0 7px;
   background-color: @background;
-  border: 2px solid @focused;
+  border-top: 1px solid @text;
 }
 
 #custom-artix {
@@ -69,17 +66,9 @@ window#waybar.empty #window {
   border-radius: 0;
 }
 
-#workspaces button:hover {
-  background-color: @second-background;
-}
-
 #workspaces button.active {
-  color: @text;
-  background-color: @second-background;
-}
-
-#workspaces button.urgent {
-  background-color: @urgent;
+  color: @focused2;
+  background-color: @background;
 }
 
 #mpris {
