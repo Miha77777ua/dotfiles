@@ -3,7 +3,7 @@ return {
   opts = {
     keymap = {
       preset = "none",
-      ["<Tab>"] = { "accept", "fallback" }, -- your changes here according to blink's docs
+      ["<Tab>"] = { "accept", "fallback" },
       ["<Up>"] = { "select_prev", "fallback" },
       ["<Down>"] = { "select_next", "fallback" },
     },

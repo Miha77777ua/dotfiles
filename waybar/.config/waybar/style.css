@@ -60,7 +60,7 @@ window#waybar.empty #window {
 
 #workspaces button {
   min-width: 0;
-  padding: 0 8px 0 8px;
+  padding: 0 5px;
   background-color: transparent;
   color: @text;
   border-radius: 0;

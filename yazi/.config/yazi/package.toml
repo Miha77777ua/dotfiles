@@ -2,26 +2,6 @@
 deps = []
 
 [[flavor.deps]]
-use = "marcosvnmelo/kanagawa-dragon"
-rev = "b9541e8"
-hash = "dc840cf225dbf6f0257617403ad43d8b"
-
-[[flavor.deps]]
-use = "dangooddd/kanagawa"
-rev = "04985d1"
-hash = "c69a63981e254a3a06a11c2bf0e6af1d"
-
-[[flavor.deps]]
-use = "melindachang/kanagawa-paper"
-rev = "7f3cd1d"
-hash = "3f84eceb475a9d1c1ea911d93a1d1898"
-
-[[flavor.deps]]
-use = "BennyOe/tokyo-night"
-rev = "8e6296f"
-hash = "d9da921c3bd37ba32ee27a8a7a40461f"
-
-[[flavor.deps]]
 use = "bennyyip/gruvbox-dark"
 rev = "619fdc5"
 hash = "d4c7003ec6dc4efd5d3a050d5c2f2575"

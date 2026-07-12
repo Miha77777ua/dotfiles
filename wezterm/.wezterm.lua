@@ -21,7 +21,7 @@ config.window_close_confirmation = "NeverPrompt"
 config.enable_wayland = true
 
 config.colors = {
-	background = "black", -- Or use #000000 or {h = 0, s = 0, b = 0}
+	background = "black",
 	tab_bar = {
 		background = "rgba(0,0,0,0)",
 		active_tab = {
@@ -42,9 +42,6 @@ config.colors = {
 config.window_background_opacity = 0.7
 
 config.window_padding = {
-	-- left = 0,
-	-- right = 0,
-
 	bottom = 0,
 }
 
