@@ -17,4 +17,4 @@ map(
   '<cmd>%s/class[^=]*="\\([^"]*\\)"/className={style.\\1}/g<cr>',
   { desc = "Regex for module files" }
 )
-map("n", "<leader>e", "<cmd>Oil<cr>")
+-- map("n", "<leader>e", "<cmd>Oil<cr>")

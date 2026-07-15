@@ -59,6 +59,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
+  all: unset;
   min-width: 0;
   padding: 0 5px;
   background-color: transparent;
@@ -67,7 +68,8 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-  color: @focused2;
+  color: @text;
+  font-weight: 600;
   background-color: @background;
 }
 

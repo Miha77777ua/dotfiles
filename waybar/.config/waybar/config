@@ -146,7 +146,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}  {capacity}%",
+        "format": "{capacity}%",
         "format-icons": ["", "", "", "", ""],
     },
 
