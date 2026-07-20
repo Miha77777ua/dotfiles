@@ -62,14 +62,15 @@
         "orientation": "horizontal",
         "modules":[
             "custom/openbracket",
-            "ext/workspaces",
+            "mango/workspaces",
             "custom/closebracket"
         ]
     },
 
-    "ext/workspaces": {
+    "mango/workspaces": {
         "format": "{icon}",
-        "on-click": "activate",
+	"hide-empty": true,
+        "on-click": "activate"
     },
 
     "mpris": {
@@ -88,12 +89,12 @@
         "orientation":"horizontal",
         "modules":[
             "custom/openbracket",
-            "dwl/window",
+            "mango/window",
             "custom/closebracket"
         ]
     },
 
-    "dwl/window": {
+    "mango/window": {
         "format": "{title}", 
         "max-length": 20,
         "min-length": 0,

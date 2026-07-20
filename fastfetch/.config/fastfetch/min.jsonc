@@ -4,7 +4,7 @@
       "source": "artix2_small",
       "padding": {
         "top": 1
-      },
+      }
     },
     "display": {
         "separator": "  "
@@ -22,6 +22,7 @@
         {
             "type": "initsystem",
             "key": "init  ",
+	    "format": "lua:return (...).name:lower():match('^[^-]+')",
             "keyColor": "33"
         },
         {
