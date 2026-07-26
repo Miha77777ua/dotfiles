@@ -3,7 +3,7 @@ configuration {
 	show-icons: true;
 	display-drun: "";
 	drun-display-format: "{name}";
-	font: "Iosevka Nerd Font 15";
+	font: "IosevkaTerm NF 15";
 }
 
 * {
