@@ -51,9 +51,9 @@ window#waybar.empty #window {
   border-top: 1px solid @text;
 }
 
-#custom-artix {
+#custom-void {
   padding-right: 11px;
-  padding-left: 5px;
+  padding-left: 4.8px;
   font-size: 15px;
   border-radius: 8px;
 }

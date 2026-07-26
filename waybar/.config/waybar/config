@@ -47,13 +47,13 @@
         "orientation": "horizontal",
         "modules":[
             "custom/openbracket",
-            "custom/artix",
+            "custom/void",
             "custom/closebracket"
         ]
     },
 
-    "custom/artix": {
-        "format": "\uf31f",
+    "custom/void": {
+        "format": "\uf32e",
         "tooltip": false,
         "on-click": "rofi -show drun -no-show-icons"
     },
@@ -62,12 +62,12 @@
         "orientation": "horizontal",
         "modules":[
             "custom/openbracket",
-            "mango/workspaces",
+            "ext/workspaces",
             "custom/closebracket"
         ]
     },
 
-    "mango/workspaces": {
+    "ext/workspaces": {
         "format": "{icon}",
 	"hide-empty": true,
         "on-click": "activate"
@@ -89,12 +89,12 @@
         "orientation":"horizontal",
         "modules":[
             "custom/openbracket",
-            "mango/window",
+            "dwl/window",
             "custom/closebracket"
         ]
     },
 
-    "mango/window": {
+    "dwl/window": {
         "format": "{title}", 
         "max-length": 20,
         "min-length": 0,
