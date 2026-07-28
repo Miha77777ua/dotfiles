@@ -1,0 +1,33 @@
+backend = "pulseaudio"
+
+[theme]
+# Core colors
+background = "#282828"          # gruvbox dark0
+primary = "#ebdbb2"             # gruvbox light1 - main text
+secondary = "#a89984"           # gruvbox light4 - muted text
+title = "#fe8019"               # gruvbox bright_orange - section titles
+
+# Playing track colors
+playing = "#b8bb26"             # gruvbox bright_green - currently playing
+playing_selected = "#98971a"    # gruvbox dark_green - selected playing track
+playing_bg = "#3c3836"          # gruvbox dark1 - playing track background
+
+# Highlight colors
+highlight = "#fbf1c7"           # gruvbox light0 - highlighted text
+highlight_bg = "#504945"        # gruvbox dark2 - selection background
+
+# Error states
+error = "#fb4934"               # gruvbox bright_red
+error_bg = "#3c3836"            # gruvbox dark1
+
+# Status bar
+statusbar = "#d5c4a1"           # gruvbox light2
+statusbar_progress = "#fe8019"  # gruvbox bright_orange
+statusbar_bg = "#3c3836"        # gruvbox dark1
+
+# Command line
+cmdline = "#ebdbb2"             # gruvbox light1
+cmdline_bg = "#3c3836"          # gruvbox dark1
+
+# Search highlighting
+search_match = "#fabd2f"        # gruvbox bright_yellow

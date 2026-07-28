@@ -10,8 +10,8 @@ export EDITOR='nvim'
 
 alias wez="curl wttr.in/Lviv" 
 alias fs="fastfetch --config min"
-alias ls="eza --icons"
-alias ll="eza -l --icons"
+alias ls="eza --icons always"
+alias ll="eza -l --icons always"
 alias l="eza -l --icons -a"
 alias ani-cli="ani-cli --dub"
 alias tree="ll -T"
