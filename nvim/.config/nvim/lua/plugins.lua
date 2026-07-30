@@ -1,0 +1,18 @@
+vim.pack.add({
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/mason-org/mason-lspconfig.nvim",
+  "https://github.com/neovim/nvim-lspconfig",
+  { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+  "https://github.com/saghen/blink.lib",
+  "https://github.com/saghen/blink.cmp",
+  "https://github.com/rafamadriz/friendly-snippets",
+  "https://github.com/nvim-lua/plenary.nvim",
+  "https://github.com/f4z3r/gruvbox-material.nvim",
+  "https://github.com/xiyaowong/transparent.nvim",
+  "https://github.com/stevearc/oil.nvim",
+  "https://github.com/nvim-mini/mini.icons",
+  "https://github.com/akinsho/bufferline.nvim",
+  "https://github.com/nvim-lualine/lualine.nvim",
+  "https://github.com/windwp/nvim-autopairs",
+  "https://github.com/max397574/startup.nvim",
+})

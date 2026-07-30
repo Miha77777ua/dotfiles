@@ -1,0 +1,4 @@
+vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>")
+vim.keymap.set("n", "L", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "H", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>")

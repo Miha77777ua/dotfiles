@@ -2,7 +2,7 @@ backend = "pulseaudio"
 
 [theme]
 # Core colors
-background = "#282828"          # gruvbox dark0
+# background = "#282828"          # gruvbox dark0
 primary = "#ebdbb2"             # gruvbox light1 - main text
 secondary = "#a89984"           # gruvbox light4 - muted text
 title = "#fe8019"               # gruvbox bright_orange - section titles

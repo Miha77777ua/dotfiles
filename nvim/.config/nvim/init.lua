@@ -1,3 +1,13 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
-vim.o.winbar = ""
+require("plugins")
+require("options")
+require("lsp")
+require("treesitter")
+require("snips")
+require("keymaps")
+require("oil-config")
+require("icons")
+require("buffers")
+require("transparent-config")
+require("autopairs")
+require("lualine-config")
+require("start")
