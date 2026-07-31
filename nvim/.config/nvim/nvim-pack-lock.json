@@ -40,6 +40,14 @@
       "rev": "98faae31e9be1cc054ae63485e58ceb185efcad0",
       "src": "https://github.com/nvim-mini/mini.icons"
     },
+    "mini.starter": {
+      "rev": "25de4998197d59673f1918968a8f4060195edca0",
+      "src": "https://github.com/nvim-mini/mini.starter"
+    },
+    "minintro.nvim": {
+      "rev": "45d146839bafbc556aec4b0d6af5d501bfa653e8",
+      "src": "https://github.com/eoh-bse/minintro.nvim"
+    },
     "nvim-autopairs": {
       "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
       "src": "https://github.com/windwp/nvim-autopairs"

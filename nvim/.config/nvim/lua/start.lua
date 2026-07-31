@@ -1,3 +1,1 @@
-require("startup").setup({
-  theme = "startify",
-})
+require("mini.starter").setup()

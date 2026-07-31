@@ -14,5 +14,5 @@ vim.pack.add({
   "https://github.com/akinsho/bufferline.nvim",
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/windwp/nvim-autopairs",
-  "https://github.com/max397574/startup.nvim",
+  "https://github.com/nvim-mini/mini.starter",
 })

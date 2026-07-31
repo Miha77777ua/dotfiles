@@ -1,1 +1,5 @@
-require("bufferline").setup()
+require("bufferline").setup({
+    options = {
+        always_show_bufferline = false,
+    },
+})
