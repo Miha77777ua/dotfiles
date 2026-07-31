@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles✨
 
 **This small repo pretty much contains some of my dotfiles, cursors and wallpapers (all stowable), so feel free to use it ;D**
 
