@@ -27,7 +27,7 @@ git clone https://github.com/Miha77777ua/dotfiles.git
 cd dotfiles
 ```
 
-### And run _stow_ for every package
+### And run _stow_ for every package (use --no-folding flag for safety, if you are unsure that .local or .config folders exist)
 
 ```bash
 stow <name of package, like nvim>
