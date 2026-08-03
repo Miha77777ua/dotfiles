@@ -1,6 +1,6 @@
 # dotfiles✨
 
-**This small repo pretty much contains some of my dotfiles, cursors and wallpapers (all stowable), so feel free to use it ;D**
+**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple TUI installer for them**
 
 ---
 
@@ -13,24 +13,38 @@
 
 ## Installation
 
-**Firstly, install GNU stow from [here](https://www.gnu.org/software/stow/) or by using your favorite package manager**
+**Firstly, install <u>GNU stow</u> from [here](https://www.gnu.org/software/stow/) or by using your favorite package manager**
 
-### Then, clone repo by running
+**Then, ensure you have `git` and clone repo by running**
 
 ```bash
 git clone https://github.com/Miha77777ua/dotfiles.git
 ```
 
-### Then, cd into cloned repo
+**Then, cd into cloned repo**
 
 ```bash
 cd dotfiles
 ```
 
-### And run _stow_ for every package (use --no-folding flag for safety, if you are unsure that .local or .config folders exist)
+**There are two methods: with <u>TUI installer</u> or <u>manually</u>**
+
+### 1. TUI installer
+
+**`make` is required**
+
+**Simply run**
 
 ```bash
-stow <name of package, like nvim>
+./install
 ```
 
-### And you are done
+**It's a shell script, which will compile simple ncurses program, written in c, which is located in `installer` subdir**
+
+### 2. Manual installation
+
+**Run `stow` for every package (use `--no-folding` flag for safety, if you are unsure that .local or .config folders exist)**
+
+```bash
+stow --no-folding <name of the package, like nvim>
+```
