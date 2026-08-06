@@ -15,4 +15,5 @@ vim.pack.add({
   "https://github.com/nvim-lualine/lualine.nvim",
   "https://github.com/windwp/nvim-autopairs",
   "https://github.com/nvim-mini/mini.starter",
+  "https://github.com/MeanderingProgrammer/render-markdown.nvim",
 })
