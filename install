@@ -4,4 +4,6 @@ set -e
 DIR="$(cd -- "$(dirname -- "$0")" && pwd)"
 
 make -C "$DIR/installer"
+mkdir -p ~/.local/share/icons
+mkdir -p ~/.config
 exec "$DIR/installer/installer" "$DIR"

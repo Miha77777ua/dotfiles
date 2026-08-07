@@ -84,7 +84,7 @@ void popup(char *msg) {
 int handle_stow(char *progs[][2], int len) {
   for (int i = 0; i < len; i++) {
     if (strcmp(progs[i][1], "[X]") == 0) {
-      char command[64] = "stow --no-folding ";
+      char command[64] = "stow ";
       strcat(command, progs[i][0]);
 
       int code = system(command);

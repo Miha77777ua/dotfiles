@@ -44,8 +44,8 @@ cd dotfiles
 
 ### 2. Manual installation
 
-**Run `stow` for every package (use `--no-folding` flag for safety, if you are unsure that .local or .config folders exist)**
+**Run `stow` for every package (ensure `~/.local/share/icons` and `~/.config` exist before stowing, so you won't link them too)**
 
 ```bash
-stow --no-folding <name of the package, like nvim>
+stow <name of the package, like nvim>
 ```
