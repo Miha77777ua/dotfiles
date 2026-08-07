@@ -44,7 +44,7 @@ cd dotfiles
 
 ### 2. Manual installation
 
-**Run `stow` for every package (ensure `~/.local/share/icons` and `~/.config` exist before stowing, so you won't link them too)**
+**Run `stow` for every package (ensure `~/.local/share/icons` and `~/.config` exist before stowing, otherwise `stow` will create symlinks for them)**
 
 ```bash
 stow <name of the package, like nvim>
