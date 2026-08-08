@@ -1,0 +1,3 @@
+[submodule "installer"]
+	path = installer
+	url = ssh://git@codeberg.org/Miha777777ua/installer.git
