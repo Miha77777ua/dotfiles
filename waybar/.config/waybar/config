@@ -1,7 +1,7 @@
 {
     "position": "bottom",
     "height": 30,
-    "spacing": 5, 
+    "spacing": 5,
 
     "modules-left": [
         "group/utilities",
@@ -116,14 +116,14 @@
         "format": "CPU:{usage}%",
         "tooltip": false,
         "interval": 2,
-        "on-click": "kitty -e btop",
+        "on-click": "kitty -e btop"
     },
 
     "memory":{
         "format": "RAM:{}%",
         "tooltip": false,
         "interval": 2,
-        "on-click": "kitty -e btop",
+        "on-click": "kitty -e btop"
     },
 
     "group/system": {
@@ -148,7 +148,7 @@
             "critical": 15
         },
         "format": "{capacity}%",
-        "format-icons": ["", "", "", "", ""],
+        "format-icons": ["", "", "", "", ""]
     },
 
     "tray": {
