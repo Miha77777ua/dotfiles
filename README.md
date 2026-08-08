@@ -19,7 +19,7 @@
 **Then, ensure you have `git` and clone repo by running**
 
 ```sh
-git clone --recurse-submodules https://github.com/Miha77777ua/dotfiles.git
+git clone --recurse-submodules https://codeberg.org/Miha777777ua/.dotfiles.git
 ```
 
 **Then, cd into cloned repo**
