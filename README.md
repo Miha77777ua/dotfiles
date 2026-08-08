@@ -1,6 +1,6 @@
 # dotfiles✨
 
-**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple TUI installer for them**
+**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple [TUI installer](https://codeberg.org/Miha777777ua/installer) for them**
 
 ---
 
