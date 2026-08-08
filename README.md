@@ -18,13 +18,13 @@
 
 **Then, ensure you have `git` and clone repo by running**
 
-```bash
-git clone https://github.com/Miha77777ua/dotfiles.git
+```sh
+git clone --recurse-submodules https://github.com/Miha77777ua/dotfiles.git
 ```
 
 **Then, cd into cloned repo**
 
-```bash
+```sh
 cd dotfiles
 ```
 
@@ -36,7 +36,7 @@ cd dotfiles
 
 **Simply run**
 
-```bash
+```sh
 ./install
 ```
 
@@ -46,6 +46,6 @@ cd dotfiles
 
 **Run `stow` for every package (ensure `~/.local/share/icons` and `~/.config` exist before stowing, otherwise `stow` will create symlinks for them)**
 
-```bash
+```sh
 stow <name of the package, like nvim>
 ```
