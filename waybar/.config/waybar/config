@@ -62,15 +62,13 @@
         "orientation": "horizontal",
         "modules":[
             "custom/openbracket",
-            "ext/workspaces",
+            "dwl/tags",
             "custom/closebracket"
         ]
     },
 
-    "ext/workspaces": {
-        "format": "{icon}",
-	"hide-empty": true,
-        "on-click": "activate"
+    "dwl/tags": {
+      "num-tags": 5
     },
 
     "mpris": {

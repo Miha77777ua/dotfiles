@@ -1,2 +1,2 @@
 #!/bin/sh
-make -C dwl > /dev/null
+make -C dwl 1>/dev/null 2>&1 &

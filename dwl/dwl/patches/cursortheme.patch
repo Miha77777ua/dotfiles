@@ -1,0 +1,46 @@
+From f08376a2a04929a3907612e6c1f980ad3cdf939f Mon Sep 17 00:00:00 2001
+From: wochap <gean.marroquin@gmail.com>
+Date: Fri, 5 Jul 2024 11:10:39 -0500
+Subject: [PATCH] implement cursortheme
+
+---
+ config.def.h | 2 ++
+ dwl.c        | 8 ++++++--
+ 2 files changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/config.def.h b/config.def.h
+index 22d2171..1f9ff56 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -13,6 +13,8 @@ static const float focuscolor[]            = COLOR(0x005577ff);
+ static const float urgentcolor[]           = COLOR(0xff0000ff);
+ /* This conforms to the xdg-protocol. Set the alpha to zero to restore the old behavior */
+ static const float fullscreen_bg[]         = {0.1f, 0.1f, 0.1f, 1.0f}; /* You can also use glsl colors */
++static const char *cursor_theme            = NULL;
++static const char cursor_size[]            = "24"; /* Make sure it's a valid integer, otherwise things will break */
+ 
+ /* tagging - TAGCOUNT must be no greater than 31 */
+ #define TAGCOUNT (9)
+diff --git a/dwl.c b/dwl.c
+index dc0437e..a91d42b 100644
+--- a/dwl.c
++++ b/dwl.c
+@@ -2522,8 +2522,12 @@ setup(void)
+ 	 * Xcursor themes to source cursor images from and makes sure that cursor
+ 	 * images are available at all scale factors on the screen (necessary for
+ 	 * HiDPI support). Scaled cursors will be loaded with each output. */
+-	cursor_mgr = wlr_xcursor_manager_create(NULL, 24);
+-	setenv("XCURSOR_SIZE", "24", 1);
++	cursor_mgr = wlr_xcursor_manager_create(cursor_theme, atoi(cursor_size));
++	setenv("XCURSOR_SIZE", cursor_size, 1);
++	if (cursor_theme)
++		setenv("XCURSOR_THEME", cursor_theme, 1);
++	else
++		unsetenv("XCURSOR_THEME");
+ 
+ 	/*
+ 	 * wlr_cursor *only* displays an image on screen. It does not move around
+-- 
+2.45.1
+
+
