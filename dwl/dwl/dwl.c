@@ -3108,7 +3108,12 @@ tile(Monitor *m)
 	}
 
 	if (n > m->nmaster)
-		mw = m->nmaster ? (int)roundf((m->w.width + m->gappiv*ie) * m->mfact) : 0;
+    mw = m->nmaster
+        ? (int)roundf(
+          (m->w.width - 2 * m->gappov * oe - m->gappiv * ie)
+          * m->mfact
+          + m->gappiv * ie)
+        : 0;
 	else
 		mw = m->w.width - 2*m->gappov*oe + m->gappiv*ie;
 	i = 0;
