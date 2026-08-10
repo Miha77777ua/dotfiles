@@ -1,6 +1,6 @@
 # dotfiles✨
 
-**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple [TUI installer](https://codeberg.org/Miha777777ua/installer) for them**
+**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple [TUI installer](https://codeberg.org/Miha77777ua/installer) for them**
 
 ---
 
@@ -19,7 +19,7 @@
 **Then, ensure you have `git` and clone repo by running**
 
 ```sh
-git clone --recurse-submodules https://codeberg.org/Miha777777ua/.dotfiles.git
+git clone --recurse-submodules https://codeberg.org/Miha77777ua/.dotfiles.git
 ```
 
 **Then, cd into cloned repo**
