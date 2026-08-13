@@ -12,8 +12,7 @@ static const unsigned int borderpx         = 1;  /* border pixel of windows */
 static const unsigned int gappih           = 5; /* horiz inner gap between windows */
 static const unsigned int gappiv           = 5; /* vert inner gap between windows */
 static const unsigned int gappoh           = 10; /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov           = 10; /* vert outer gap between windows and screen edge */
-static const float rootcolor[]             = COLOR(0x222222ff);
+static const unsigned int gappov           = 10; /* vert outer gap between windows and screen edge */ static const float rootcolor[]             = COLOR(0x222222ff);
 static const float bordercolor[]           = COLOR(0x3C3836ff);
 static const float focuscolor[]            = COLOR(0xEBDBB2ff);
 static const float urgentcolor[]           = COLOR(0xff0000ff);
@@ -144,7 +143,7 @@ static const enum libinput_config_tap_button_map button_map = LIBINPUT_CONFIG_TA
 /* commands */
 static const char *termcmd[] = { "foot", NULL };
 static const char *menucmd[] = { "rofi", "-show", "drun", "-no-show-icons", NULL };
-static const char *zencmd[] = { "/home/miha/zen/zen", NULL };
+static const char *qutecmd[] = { "prime-run", "qutebrowser", NULL };
 
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: 2 -> at, etc. */
@@ -152,7 +151,7 @@ static const Key keys[] = {
 	{ MODKEY,                    XKB_KEY_space,           spawn,            {.v = menucmd} },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Return,      spawn,            {.v = termcmd} },
 	{ MODKEY,                    XKB_KEY_v,           spawn,            SHCMD("cliphist list | rofi -dmenu | cliphist decode | wl-copy") },
-	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_Return,      spawn,            {.v = zencmd} },
+	{ MODKEY|WLR_MODIFIER_CTRL,  XKB_KEY_Return,      spawn,            {.v = qutecmd} },
 	{ 0,                         XKB_KEY_Print,       spawn,            SHCMD("grim -g \"$(slurp)\" - | swappy -f -") },
 	{ MODKEY,                    XKB_KEY_j,           focusstack,       {.i = +1} },
 	{ MODKEY,                    XKB_KEY_k,           focusstack,       {.i = -1} },

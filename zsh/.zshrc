@@ -15,6 +15,7 @@ alias ll="eza -l --icons always"
 alias l="eza -l --icons -a"
 alias ani-cli="ani-cli --dub"
 alias tree="ll -T"
+alias qutebrowser="prime-run qutebrowser"
 
 rc() {
   gh repo create $1 --public --clone && gh repo view --web $1
