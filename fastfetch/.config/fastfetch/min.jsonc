@@ -22,7 +22,6 @@
         {
             "type": "initsystem",
             "key": "init  ",
-	          "format": "lua:return (...).name:lower():match('^[^-]+')",
             "keyColor": "33"
         },
         {

@@ -1,21 +1,16 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="simple"
+ZSH_THEME="gentoo"
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
+export PF_COL1=3
+export PF_COL3=5
 
 alias wez="curl wttr.in/Lviv" 
-alias fs="fastfetch --config min"
-alias ls="eza --icons always"
-alias ll="eza -l --icons always"
-alias l="eza -l --icons -a"
-alias ani-cli="ani-cli --dub"
-alias tree="ll -T"
-alias qutebrowser="prime-run qutebrowser"
 
 rc() {
   gh repo create $1 --public --clone && gh repo view --web $1
@@ -34,17 +29,13 @@ qci() {
 }
 
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	command yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+  command yazi "$@" --cwd-file="$tmp"
+  IFS= read -r -d '' cwd < "$tmp"
+  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+  rm -f -- "$tmp"
 }
 
 source <(fzf --zsh)
 
-eval "$(starship init zsh)"
-
-eval "$(zoxide init --cmd cd zsh)"
-
-fastfetch --config min
+pfetch

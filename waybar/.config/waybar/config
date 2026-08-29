@@ -47,13 +47,13 @@
         "orientation": "horizontal",
         "modules":[
             "custom/openbracket",
-            "custom/void",
+            "custom/gentoo",
             "custom/closebracket"
         ]
     },
 
-    "custom/void": {
-        "format": "\uf32e",
+    "custom/gentoo": {
+        "format": "\uf30d",
         "tooltip": false,
         "on-click": "rofi -show drun -no-show-icons"
     },
