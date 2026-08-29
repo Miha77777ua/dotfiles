@@ -13,5 +13,6 @@ settings:
     https://github.com: access-paste
     https://stackoverflow.com: access-paste
     https://starship.rs: access-paste
+    https://yazi-rs.github.io: access-paste
   content.notifications.enabled:
     https://www.youtube.com: true
