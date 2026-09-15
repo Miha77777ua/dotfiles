@@ -1,4 +1,6 @@
 config.load_autoconfig(True)
+config.bind(',m', 'spawn --userscript view_in_mpv')
+config.bind('X', 'hint links spawn mpv {hint-url}')
 c.colors.webpage.bg = "#282828"
 c.colors.webpage.darkmode.enabled = True
 c.url.start_pages = "https://www.koryschneider.com/tab/"
