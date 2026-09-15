@@ -11,8 +11,12 @@ settings:
     https://claude.ai: access-paste
     https://codeberg.org: access-paste
     https://github.com: access-paste
+    https://mail.proton.me: access-paste
     https://stackoverflow.com: access-paste
     https://starship.rs: access-paste
     https://yazi-rs.github.io: access-paste
   content.notifications.enabled:
+    https://mail.proton.me: true
     https://www.youtube.com: true
+  content.register_protocol_handler:
+    https://mail.proton.me#mailto=%25s: true
