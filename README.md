@@ -1,6 +1,6 @@
 # dotfiles✨
 
-**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable) and also a simple [TUI installer](https://codeberg.org/Miha77777ua/installer) for them**
+**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable)
 
 ---
 
@@ -28,23 +28,7 @@ git clone --recurse-submodules https://codeberg.org/Miha77777ua/.dotfiles.git
 cd dotfiles
 ```
 
-**There are two methods: with <u>TUI installer</u> or <u>manually</u>**
-
-### 1. TUI installer
-
-**`make` is required**
-
-**Simply run**
-
-```sh
-./install
-```
-
-**It's a shell script, which will compile simple ncurses program, written in c, which is located in `installer` subdir**
-
-### 2. Manual installation
-
-**Run `stow` for every package (ensure `~/.local/share/icons` and `~/.config` exist before stowing, otherwise `stow` will create symlinks for them)**
+**Run `stow` for every package (ensure `~/.local/share/icons`, `~/.config` and `~/.Pictures` exist before stowing, otherwise `stow` will create symlinks for them)**
 
 ```sh
 stow <name of the package, like nvim>
