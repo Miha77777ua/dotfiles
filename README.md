@@ -1,6 +1,6 @@
 # dotfiles✨
 
-This a small repo which contains my dotfiles, cursors and wallpapers (all stowable)
+My dotfiles, cursors and wallpapers (all stowable)
 
 ---
 
@@ -19,7 +19,7 @@ This a small repo which contains my dotfiles, cursors and wallpapers (all stowab
 **Then, ensure you have `git` and clone repo by running**
 
 ```sh
-git clone --recurse-submodules https://codeberg.org/Miha77777ua/.dotfiles.git
+git clone --recurse-submodules https://git.sr.ht/~miha77777ua/.dotfiles
 ```
 
 **Then, cd into cloned repo**
