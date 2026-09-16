@@ -1,3 +1,0 @@
-#!/bin/sh
-git submodule update --init --recursive --quiet dwl 1>/dev/null 2>&1
-make -C dwl 1>/dev/null 2>&1 &
