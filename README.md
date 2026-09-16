@@ -1,6 +1,6 @@
 # dotfiles✨
 
-**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable)
+**This a small repo which contains my dotfiles, cursors and wallpapers (all stowable)**
 
 ---
 
