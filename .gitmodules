@@ -1,6 +1,3 @@
-[submodule "installer"]
-	path = installer
-	url = https://codeberg.org/Miha77777ua/installer.git
 [submodule "dwl/dwl"]
 	path = dwl/dwl
 	url = https://codeberg.org/Miha77777ua/dwl.git
