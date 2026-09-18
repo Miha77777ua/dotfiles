@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  content.geolocation:
+    https://acs4.privatbank.ua: true
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
     https://claude.ai: access-paste
