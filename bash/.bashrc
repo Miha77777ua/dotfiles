@@ -1,5 +1,7 @@
 source ~/.git-prompt.sh
 
+export EDITOR=nvim
+
 export PF_COL1=3
 export PF_COL3=5
 
