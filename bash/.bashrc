@@ -1,12 +1,13 @@
 source ~/.git-prompt.sh
 
-export EDITOR=nvim
+export EDITOR=vis
 
 export PF_COL1=3
 export PF_COL3=5
 
 export PS1='\[\e[33;1m\]\u@\h \[\e[34m\]\w$(__git_ps1 " \[\e[35m\](\[\e[32m\]%s\[\e[35m\])") \[\e[34m\]\$ \[\e[00m\]'
 
+alias n="nnn -e -H"
 
 qc() {
   qemu-system-x86_64 -enable-kvm -drive if=pflash,format=raw,readonly=on,file=/usr/share/edk2/OvmfX64/OVMF_CODE.fd -drive if=pflash,format=raw,file=$2/OVMF_VARS.fd -drive file=$1 -m 8G -cpu host -smp 6 -display gtk -vga virti -netdev user,id=net0,hostfwd=tcp::2222-:22 -device virtio-net-pci,netdev=net0
