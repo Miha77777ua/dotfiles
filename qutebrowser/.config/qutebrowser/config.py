@@ -2,9 +2,11 @@ config.load_autoconfig(True)
 config.bind(',m', 'spawn --userscript view_in_mpv')
 config.bind('X', 'hint links spawn mpv {hint-url}')
 c.colors.webpage.bg = "#282828"
-c.colors.webpage.darkmode.enabled = True
-c.url.start_pages = "https://www.koryschneider.com/tab/"
-c.url.default_page = "https://www.koryschneider.com/tab/"
+c.colors.webpage.preferred_color_scheme = 'dark'
+# c.url.start_pages = "https://www.koryschneider.com/tab/"
+c.url.start_pages = "~/.config/qutebrowser/home.html"
+# c.url.default_page = "https://www.koryschneider.com/tab/"
+c.url.default_page = "~/.config/qutebrowser/home.html"
 c.fonts.default_family = "Iosevka Nerd Font"
 c.fonts.web.size.default = 14
 bg0_hard = "#1d2021"
