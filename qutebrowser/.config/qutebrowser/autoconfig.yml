@@ -6,6 +6,8 @@
 
 config_version: 2
 settings:
+  colors.webpage.darkmode.enabled:
+    global: true
   content.geolocation:
     https://acs4.privatbank.ua: true
   content.javascript.clipboard:

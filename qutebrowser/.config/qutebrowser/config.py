@@ -1,8 +1,9 @@
 config.load_autoconfig(True)
-config.bind(',m', 'spawn --userscript view_in_mpv')
-config.bind('X', 'hint links spawn mpv {hint-url}')
+config.bind(",m", "spawn --userscript view_in_mpv")
+config.bind("X", "hint links spawn mpv {hint-url}")
+config.bind("ct", "config-cycle colors.webpage.darkmode.enabled")
 c.colors.webpage.bg = "#282828"
-c.colors.webpage.preferred_color_scheme = 'dark'
+c.colors.webpage.darkmode.enabled = True
 # c.url.start_pages = "https://www.koryschneider.com/tab/"
 c.url.start_pages = "~/.config/qutebrowser/home.html"
 # c.url.default_page = "https://www.koryschneider.com/tab/"
@@ -10,8 +11,8 @@ c.url.default_page = "~/.config/qutebrowser/home.html"
 c.fonts.default_family = "Iosevka Nerd Font"
 c.fonts.web.size.default = 14
 bg0_hard = "#1d2021"
-bg0_soft = '#32302f'
-bg0_normal = '#282828'
+bg0_soft = "#32302f"
+bg0_normal = "#282828"
 bg0 = bg0_normal
 bg1 = "#3c3836"
 bg2 = "#504945"
@@ -66,7 +67,7 @@ c.colors.downloads.stop.fg = c.colors.downloads.start.fg
 c.colors.downloads.stop.bg = bright_aqua
 c.colors.downloads.error.fg = bright_red
 c.colors.hints.fg = bg0
-c.colors.hints.bg = 'rgba(250, 191, 47, 200)'  # bright_yellow
+c.colors.hints.bg = "rgba(250, 191, 47, 200)"  # bright_yellow
 c.colors.hints.match.fg = bg4
 c.colors.keyhint.fg = fg4
 c.colors.keyhint.suffix.fg = fg0
@@ -81,7 +82,7 @@ c.colors.messages.info.fg = fg2
 c.colors.messages.info.bg = bg0
 c.colors.messages.info.border = c.colors.messages.info.bg
 c.colors.prompts.fg = fg2
-c.colors.prompts.border = f'1px solid {bg1}'
+c.colors.prompts.border = f"1px solid {bg1}"
 c.colors.prompts.bg = bg3
 c.colors.prompts.selected.bg = bg2
 c.colors.statusbar.normal.fg = fg2
