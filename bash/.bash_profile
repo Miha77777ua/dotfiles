@@ -4,5 +4,5 @@ fi
 
 if [[ "$(tty)" == "/dev/tty1" ]]; then
     export XDG_CURRENT_DESKTOP=wlroots
-    dbus-run-session -- dwl
+    dbus-run-session -- sh -c "someblocks -p | dwl"
 fi
