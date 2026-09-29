@@ -8,6 +8,7 @@ c.colors.webpage.darkmode.enabled = True
 c.url.start_pages = "~/.config/qutebrowser/home.html"
 # c.url.default_page = "https://www.koryschneider.com/tab/"
 c.url.default_page = "~/.config/qutebrowser/home.html"
+c.content.user_stylesheets = ["~/.config/qutebrowser/main.css"]
 c.fonts.default_family = "Iosevka Nerd Font"
 c.fonts.web.size.default = 14
 bg0_hard = "#1d2021"

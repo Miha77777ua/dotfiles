@@ -67,6 +67,6 @@ end)
 vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused args
 	-- Your per window configuration options e.g.
 	-- vis:command('set number')
-	vis:command('set tabwidth 2')
-  	vis:command('set expandtab')
+  vis:command('set tabwidth 2')
+  vis:command('set expandtab')
 end)

@@ -80,9 +80,12 @@ window#waybar.empty #window {
   color: @text;
 }
 
-#window,
-#tray {
+#window {
   padding: 0 5px;
+}
+
+#tray {
+  padding: 0 3px;
 }
 
 #clock,

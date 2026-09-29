@@ -28,3 +28,6 @@ bluetooth() {
 eval "$(fzf --bash)"
 
 pfetch
+
+# Added by spotatui installer
+export PATH="$HOME/.local/bin:$PATH"
