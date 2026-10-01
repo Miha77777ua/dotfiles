@@ -26,7 +26,7 @@ git clone --recurse-submodules https://git.sr.ht/~miha77777ua/.dotfiles
 cd dotfiles
 ```
 
-**Run `stow` for every package (ensure `~/.local/share/icons`, `~/.config` and `~/.Pictures` exist before stowing, otherwise `stow` will create symlinks for them)**
+**Run `stow` for every package (ensure `~/.local/share/icons`, `~/.config` and `~/Pictures` exist before stowing, otherwise `stow` will create symlinks for them)**
 
 ```sh
 stow <name of the package, like nvim>

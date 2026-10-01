@@ -3,7 +3,7 @@ require('vis')
 
 vis.events.subscribe(vis.events.INIT, function()
 	-- Your global configuration options
-  local lexers = vis.lexers
+	local lexers = vis.lexers
 
   local colors = {
   	['base00'] = '#262626',
@@ -68,5 +68,4 @@ vis.events.subscribe(vis.events.WIN_OPEN, function(win) -- luacheck: no unused a
 	-- Your per window configuration options e.g.
 	-- vis:command('set number')
   vis:command('set tabwidth 2')
-  vis:command('set expandtab')
 end)
