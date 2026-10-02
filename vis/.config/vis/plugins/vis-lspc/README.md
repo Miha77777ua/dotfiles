@@ -1,0 +1,272 @@
+# `vis-lspc`
+
+A language server protocol client for the [`vis` editor](https://github.com/martanne/vis).
+
+## What's working
+
+`vis-lspc` currently supports:
+* `textDocument/completion`
+* `textDocument/declaration`
+* `textDocument/definition`
+* `textDocument/references`
+* `textDocument/typeDefinition`
+* `textDocument/implementation`
+* `textDocument/hover`
+* `textDocument/rename`
+* `textDocument/formatting`
+* `textDocument/documentSymbol` *Experimental*
+* `Diagnostics`
+
+## What's not working
+
+Everything else.
+
+To my knowledge there is currently no good way to detect file changes via the Lua API.
+But this is essential to support [Text Synchronization](https://microsoft.github.io/language-server-protocol/specifications/specification-current/#textSynchronization) which is required by the
+LSP protocol.
+
+A dirty workaround we currently use is to send the whole file content in a `textDocument/didChange`
+method call before calling any other method.
+If someone can come up with an idea how to solve this I would appreciate contributions.
+
+Communicating with language-servers via other channels than stdin/stdout.
+
+Currently, only a handful of language servers are configured by default.
+Their configuration can be found in [`supported_servers.lua`](https://gitlab.com/muhq/vis-lspc/-/blob/main/supported-servers.lua).
+
+## Requirements
+
+* `vis` must offer the `communicate` Lua API
+  * The API included in `vis` >= 0.9 is supported on the main branch
+  * For legacy support using the [first API draft patches](https://github.com/martanne/vis/pull/675) use the v0.2.x branch
+* The language server you want to use. [Microsoft's list of implementations](https://microsoft.github.io/language-server-protocol/implementors/servers/)
+* Optional: the JSON implementation of your choice
+	* must provide `encode` and `decode` methods
+	* `vis-lspc` tries to find a suitable JSON implementation using those candidates:
+		* `json`
+		* `cjson`
+		* `dkjson`
+		* bundled fallback (no utf8 support)
+
+## Installation
+
+1. Clone this repository into your `vis` plugins directory
+2. Load the plugin in your `visrc.lua` with `require('plugins/vis-lspc')`
+
+Alternatively, a plugin manager like [vis-plug](https://github.com/erf/vis-plug) can be used to install `vis-lspc`.
+
+## Usage
+
+`vis-lspc` provides some default key bindings:
+
+### Default Bindings
+
+	Normal mode:
+	<F2> - start a language server for win.syntax
+	<F3> - open win.file with a running language server
+	<C-]> | <gd> - jump to the definition of the symbol under the main cursor
+	<gD> - jump to declaration
+	<gd> - jump to definition
+	<gi> - jump to implementation
+	<gr> - show references
+	< D> - jump to type definition
+	<C-t> - go back in the jump history
+	< e> - show diagnostics of current line
+	< n> - jump to the next available diagnostic
+	< N> - jump to the previous available diagnostic
+	<K> - hover over current position
+	Normal and Insert mode:
+	<C- > - get completions
+	< o> - open the symbol navigation window
+
+#### Navigation Window
+
+	Normal mode:
+	<p> - scroll to the selected symbol
+	<Enter> - jump to the selected symbol (switch to the code window)
+	<q> - close the navigaion window
+
+### Available commands
+
+	# language-server management:
+	lspc-start-server [syntax] - start a language server for syntax or win.syntax
+	lspc-stop-server [syntax] - stop the language server for syntax or win.syntax
+
+	# file registration:
+	lspc-open - register the file in the current window
+	lspc-close - unregister the file in the current window
+
+	# navigation commands (they all operate on the symbol under the main cursor):
+	lspc-completion - syntax completion
+	lspc-references [e | vsplit | hsplit] - select and open a reference
+	lspc-declaration [e | vsplit | hsplit] - select and open a declaration
+	lspc-definition [e | vsplit | hsplit] - open the definition
+	lspc-typeDeclaration [e | vsplit | hsplit] - select and open a type declaration
+	lspc-implementation [e | vsplit | hsplit] - I actually have no idea what this does
+
+	lspc-back - navigate back in the goto history
+
+	# workspace edits
+	lspc-rename <new name> - rename the identifier under the cursor to <new name>
+	lspc-format - format the file in the current window
+
+	# development support
+	lspc-hover - hover over the current line
+	lspc-show-diagnostics - show the available diagnostics of the current line
+	lspc-next-diagnostic - jump to the next available diagnostic
+	lspc-prev-diagnostic - jump to the previous available diagnostic
+
+	# navigation windows
+	lspc-navigate-symbols - navigate a file by its symbols in a seperate window
+	lspc-navwin-scroll - scroll to the selected symbol
+	lspc-navwin-jump - jump to the selected symbol
+	lspc-navwin-close - close the navigation window
+
+### Available configuration options
+
+The module table returned by `require('plugins/vis-lspc')` can be used to configure
+some aspects of `vis-lspc`.
+
+Available options are:
+
+* `name = 'vis-lspc'` - the name `vis-lspc` introduces itself to a language server
+* `logging = false` - enable logging only useful for debugging `vis-lspc`
+* `log_file = nil` - nil, filename, or function returning a filename
+  * If `log_file` is `nil` `vis-lspc` will create a new file in `$XDG_DATA_HOME/vis-lspc`
+* `autostart = true` - try to start a language server in WIN_OPEN
+* `menu_cmd = 'fzf' or 'vis-menu'` - program to prompt for user choices
+* `confirm_cmd = 'vis-menu'` - program to prompt for user confirmation
+* `autoconfirm_edits = false` - apply workspaceEdits without user confirmation
+* `ls_map` - a table mapping `vis` syntax names to language server configurations
+* `highlight_diagnostics = 'line'` - highlight the `range` or `line`number of available diagnostics
+* `diagnostic_styles = { error = 'back:red', warning = 'back:yellow', information = 'back:yellow', hint = 'back:yellow', }` - styles used to highlight different diagnostics
+* `workspace_edit_remember_cursor = true` - restore the primary cursor position after a workspaceEdit
+* `message_level = 3` - the level of shown messages retrieved via `window/showMessage` notifications
+* `show_message = 'message'` - how to present multiline information. `'message'`: use `vis:message`; `'open'`: use a new window supporting syntax highlighting.
+* `universal_root_globs = {}` - Globs to consider as workspace root for any language server (e.g. `*.git` or `*.hg`).
+* `fallback_dirname_as_root = false` - If set to true a file's directory is used as workspace root if no explicit root was found.
+* `navwin_symbols_format = '%s[%.1s] %s\n'` - The format string used to display a symbol in the symbol navigation window.
+* `navwin_layout = 'vr'` - Layout where the navigation window will be placed (`v[r|l]|h[t|b]`: vertical right or left; horizontal top or bottom).
+
+#### Configure your own Language Server
+
+If `vis-lspc` has no language server configuration for your desired language or server
+you have to create a language server configuration and insert it into the `ls_map`
+table.
+Please have a look at #2 and share your configuration with everyone else.
+
+A language server configuration is a Lua table containing at least a `name` field
+which is used to manage the language server and a `cmd` field which is used to
+start the language server.
+
+**Note:** the language server must communicate with `vis-lspc` via stdio.
+Your language server probably supports stdio but maybe requires a [special
+command line flag](https://microsoft.github.io/language-server-protocol/specifications/specification-current/#implementationConsiderations).
+
+Additional fields are:
+
+* `settings` - a table of arbitrary possibly nested data. It is sent in a `workspace/didChangeConfiguration` to the language server after initialization. It is also used to lookup configuration for the `workspace/configuratio` method call.
+* `init_options` - table of arbitrary possibly nested data. It will be sent to the server as `initializationOptions` in the parameters of the `initialize` method call.
+* `formatting_options` - table of configuration data as found in [the LSP specification](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_formatting). `tabSize` and `insertSpaces` are required.
+
+**Example:** The language server configuration entry in the `ls_map` for `lua-language-server`
+
+```lua
+ls_map.lua = {
+  name = 'lua-language-server',
+  cmd = 'lua-language-server',
+  settings = {
+    Lua = {diagnostics = {globals = {'vis'}}, telemetry = {enable = false}},
+  },
+  formatting_options = {tabSize = 2, insertSpaces = true},
+},
+```
+
+Language servers configured in `vis-lspc` can be found in `supported_servers.lua`.
+
+#### Language Server Settings
+
+Language servers can be configured with different mechanisms, all merged together to form the *effective* settings for a language server instance.
+There are three kinds of settings:
+
+1. *Global settings* specified by the user in its `vis` configuration in a language server configuration's `settings` member.
+2. *Project local* settings stored in a `.vis-lspc-settings.json` file along your regular project files.
+3. Settings stored by `vis-lspc` in the `settings.json` file.
+   The *client local* user settings are stored for each language server and each file path.
+   Settings for a more specific file path override settings defined for a parent directory.
+
+The *project* and *client local* settings are indexed by the name of the language server.
+
+All relevant settings are merged to form the *effective* settings passed to the language server.
+More specific settings take precedence before more general ones.
+
+### Workspace Detection
+
+During server initialization an URI to the root of the workspace (a folder opened by the editor) can be passed to the server.
+Workspaces are used to implement certain project wide [features](https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#workspace_symbol).
+
+Since vis has no sense of folders and I think it is the job of each individual language server to detect the root of language idiomatic projects, workspace root detection is only activated for certain language servers by default.
+
+If you want to use some universal criteria to detect project roots, like always using a file's directory or considering all source-control repositories as projects you can use the configuration options `universal_root_globs` and `fallback_dirname_as_root`.
+
+Additionally, you can configure globs to detect a project's root for each language server using the `roots` member in its `ls_map` table entry.
+
+For example, `roots = {'compile_commands.json', '.clangd'}` is used to detect the project root for clangd.
+
+### Events
+
+vis-lspc extends vis' event system with its own set of events:
+
+* `lspc.event.LS_INITIALIZED` - emitted after sending the `initialized` notification
+* `lspc.event.LS_DID_OPEN` - emitted after sending the `textDocument/didOpen` notification
+
+All events receive the language server as first argument.
+
+### Extensibility
+
+The returned module table also includes functions you can use in your own `vis`
+configuration.
+
+#### `lspc.lspc_open`
+
+Navigate between or in files, while remembering the current position in a runtime history.
+
+```lua
+lspc_open(win, path, line, col, cmd)
+```
+
+  - `win` - a window in which to open the file
+  - `path` - the path to the file to open
+  - `line` - the line to open. (`nil` for no position within the file).
+  - `col` - same as `line`, but for the column.
+  - `cmd` - `vis` command to open the file. (`e` or `o`, see `vis` commands)
+
+#### `lspc.get_running_ls`
+
+Get a running language server table.
+
+```lua
+get_running_ls(win, explicit_syntax)
+```
+
+  - `win` - a window in which the language server is running
+  - `explicit_syntax` - syntax of the language server if it differs from `win.syntax`
+
+#### `lspc.select`
+
+Select an item from a list of choices by calling the external program specified by `lspc.menu_cmd`.
+
+```lua
+lspc.select(lspc, choices) -- or
+lspc:select(choices)
+```
+
+  - `choices` - A numeric table containing the possible choices
+
+## License
+
+All code except otherwise noted is licensed under the term of GPL-3.
+See the LICENSE file for more details.
+Our fallback JSON implementation in `json.lua` is NOT licensed under GPL-3.
+It is taken from [here](https://gist.github.com/tylerneylon/59f4bcf316be525b30ab)
+and is put into public domain by [Tyler Neylon](https://github.com/tylerneylon).

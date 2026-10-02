@@ -1,0 +1,20 @@
+image: muhq/lua-dev:0.2
+
+stages:
+  - check
+  - test
+
+check-luacheck:
+  stage: check
+  script:
+    - make check-luacheck
+
+check-format:
+  stage: check
+  script:
+    - make check-format
+
+test:
+  stage: test
+  script:
+    - make test
