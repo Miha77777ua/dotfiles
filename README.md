@@ -2,13 +2,9 @@
 
 My dotfiles, cursors and wallpapers (all stowable)
 
----
-
 ## Preview
 
 ![preview](./preview/preview.png)
-
----
 
 ## Installation
 
