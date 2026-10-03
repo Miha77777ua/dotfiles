@@ -1,0 +1,6 @@
+
+rst is not good enough, .. can comment the line, but its not meant to
+..
+	this is a comment
+	and it ends at indentation level 0
+this is not a comment
