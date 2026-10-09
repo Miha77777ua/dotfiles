@@ -1,6 +1,6 @@
 # dotfiles
 
-My dotfiles, cursors and wallpapers (all stowable)
+My dotfiles (with 2 sub-repos included), cursors and wallpapers (all stowable)
 
 ## Preview
 
