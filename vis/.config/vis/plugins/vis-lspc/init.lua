@@ -2072,7 +2072,8 @@ vis.events.subscribe(vis.events.FILE_SAVE_POST, function(file, path)
     if ls.capabilities.textDocumentSync and type(ls.capabilities.textDocumentSync) == 'table' and
         ls.capabilities.textDocumentSync.save then
       local did_save_params = {textDocument = {uri = path_to_uri(file.path)}}
-      if ls.capabilities.textDocumentSync.save.includeText then
+      if type(ls.capabilities.textDocumentSync.save) == 'table' and
+          ls.capabilities.textDocumentSync.save.includeText then
         did_save_params.text = file:content(0, file.size)
       end
       ls:send_notification('textDocument/didSave', did_save_params)

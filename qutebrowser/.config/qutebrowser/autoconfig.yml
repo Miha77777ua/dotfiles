@@ -7,9 +7,10 @@
 config_version: 2
 settings:
   colors.webpage.darkmode.enabled:
-    global: true
+    global: false
   content.geolocation:
     https://acs4.privatbank.ua: true
+    https://acsk.privatbank.ua: true
   content.javascript.clipboard:
     https://chatgpt.com: access-paste
     https://claude.ai: access-paste

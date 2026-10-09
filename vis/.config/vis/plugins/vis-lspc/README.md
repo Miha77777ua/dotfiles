@@ -263,6 +263,17 @@ lspc:select(choices)
 
   - `choices` - A numeric table containing the possible choices
 
+## Contribute
+
+The vis-lspc project prioritizes the social and human aspects of
+collective creation. Therefore:
+
+1. LLMs ("AI") can not be used to create or modify
+anything submitted to vis-lspc.
+
+You might be asked to prove your contribution meets this requirement.
+You might be banned for trying to circumvent this policy.
+
 ## License
 
 All code except otherwise noted is licensed under the term of GPL-3.
