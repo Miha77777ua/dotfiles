@@ -6,11 +6,13 @@ My dotfiles (with 3 sub-repos included), cursors and wallpapers (all stowable)
 
 ## Installation
 
-### NOTE
+### **NOTE**
 This repo contains 3 submodules
+
 - [`dwl`](https://git.sr.ht/~miha77777ua/dwl)
 - [`someblocks`](https://git.sr.ht/~miha77777ua/someblocks)
 - [`stetch`](https://git.sr.ht/~miha77777ua/stetch)
+
 For them, you need to use `stow` as for any other package and then follow install guide for each of them (**check README for every submodule**)
 
 Firstly, install <u>GNU stow</u> from [here](https://www.gnu.org/software/stow/) or by using your favorite package manager
