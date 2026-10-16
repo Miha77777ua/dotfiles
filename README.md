@@ -15,6 +15,8 @@ This repo contains 3 submodules
 
 For them, you need to use `stow` as for any other package and then follow install guide for each of them (**check README for every submodule**)
 
+---
+
 Firstly, install <u>GNU stow</u> from [here](https://www.gnu.org/software/stow/) or by using your favorite package manager
 
 Then, ensure you have `git` and clone repo by running
