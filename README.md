@@ -6,7 +6,10 @@ My dotfiles (with 3 sub-repos included), cursors and wallpapers (all stowable)
 
 ## Installation
 
-### **NOTE**
+**NOTE**
+
+---
+
 This repo contains 3 submodules
 
 - [`dwl`](https://git.sr.ht/~miha77777ua/dwl)
