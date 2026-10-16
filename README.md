@@ -1,4 +1,4 @@
-# dotfiles
+# .dotfiles
 
 My dotfiles (with 3 sub-repos included), cursors and wallpapers (all stowable)
 
