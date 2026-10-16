@@ -23,7 +23,7 @@ cd dotfiles
 Run `stow` for every package (ensure `~/.local/share/icons`, `~/.config` and `~/Pictures` exist before stowing, otherwise `stow` will create symlinks for them)
 
 ```sh
-stow <name of the package, like nvim>
+stow <name of the package, like vis>
 ```
 
 ### **NOTE**
