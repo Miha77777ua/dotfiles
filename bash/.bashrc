@@ -27,4 +27,4 @@ bluetooth() {
 
 eval "$(fzf --bash)"
 
-# stetch
+stetch

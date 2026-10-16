@@ -2,7 +2,8 @@
 
 My dotfiles (with 3 sub-repos included), cursors and wallpapers (all stowable)
 
-![preview](./preview/preview.png)
+![preview](./preview/preview1.png)
+![preview](./preview/preview2.png)
 
 ## Installation
 
