@@ -4,6 +4,3 @@
 [submodule "someblocks/someblocks"]
 	path = someblocks/someblocks
 	url = https://git.sr.ht/~miha77777ua/someblocks
-[submodule "stetch/stetch"]
-	path = stetch/stetch
-	url = https://git.sr.ht/~miha77777ua/stetch

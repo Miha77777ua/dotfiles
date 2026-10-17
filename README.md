@@ -1,6 +1,6 @@
 # .dotfiles
 
-My dotfiles (with 3 sub-repos included), cursors and wallpapers (all stowable)
+My dotfiles (with 2 sub-repos included), cursors and wallpapers (all stowable)
 
 ![preview](./preview/preview1.png)
 
@@ -34,7 +34,6 @@ This repo contains 3 submodules
 
 - [`dwl`](https://git.sr.ht/~miha77777ua/dwl)
 - [`someblocks`](https://git.sr.ht/~miha77777ua/someblocks)
-- [`stetch`](https://git.sr.ht/~miha77777ua/stetch)
 
 For them, you need to use `stow` as for any other package and then follow install guide for each of them (**check README for every submodule**)
 
