@@ -41,6 +41,6 @@ For them, you need to use `stow` as for any other package and then follow instal
 
 This repository is licensed under **MIT License** EXCEPT for:
 - [`vis-lspc`](https://codeberg.org/muhq/vis-lspc) (`vis/.config/vis/plugins/vis-lspc`), which is licensed under **GPL-3.0**
-- [`vis-commentary`](https://codeberg.org/luxanna/vis-autoclose) (`vis/.config/vis/plugins/vis-autoclose, which is licensed under **BSD-3-Clause**
+- [`vis-commentary`](https://codeberg.org/luxanna/vis-autoclose) (`vis/.config/vis/plugins/vis-autoclose`), which is licensed under **BSD-3-Clause**
 
 dwl (`dwl/dwl`) (**GPL-3.0**) and someblocks (`someblocks/someblocks`) (**ISC**) are submodules
