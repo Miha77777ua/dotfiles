@@ -1,5 +1,8 @@
 # .dotfiles
 
+> [!IMPORTANT]  
+> I moved to [**sr.ht**](https://sr.ht/~miha77777ua/.dotfiles)!
+
 My dotfiles (with 2 sub-repos included), cursors and wallpapers (all stowable)
 
 ![preview](./preview/preview1.png)
