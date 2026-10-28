@@ -30,7 +30,7 @@ stow <name of the package, like vis>
 
 ### **NOTE**
 
-This repo contains 3 submodules
+This repo contains 2 submodules
 
 - [`dwl`](https://git.sr.ht/~miha77777ua/dwl)
 - [`someblocks`](https://git.sr.ht/~miha77777ua/someblocks)
